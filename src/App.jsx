@@ -10,11 +10,8 @@ const App = () => {
   const [mailboxes, setMailboxes] = useState([]);
 
   const addBox = (mailbox) => {
-    let id = mailboxes.length + 1;
-    setMailboxes((prevMailboxes) => [
-      ...prevMailboxes,
-      { _id: id, ...mailbox },
-    ]);
+    mailbox._id = mailboxes.length + 1;
+    setMailboxes((prevMailboxes) => [...prevMailboxes, mailbox]);
   };
 
   return (
@@ -33,8 +30,14 @@ const App = () => {
           path="/mailboxes"
           element={<MailboxList mailboxes={mailboxes} />}
         />
-        <Route path="/new-mailbox" element={<MailboxForm onAdd={addBox} />} />
-        <Route path="/mailboxes/:mailboxId" element={<MailboxDetails />} />
+        <Route
+          path="/new-mailbox"
+          element={<MailboxForm addMailbox={addBox} />}
+        />
+        <Route
+          path="/mailboxes/:mailboxId"
+          element={<MailboxDetails mailboxes={mailboxes} />}
+        />
       </Routes>
     </>
   );
