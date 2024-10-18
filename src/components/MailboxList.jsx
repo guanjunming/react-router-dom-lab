@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const MailboxList = ({ mailboxes }) => {
   return (
-    <>
+    <main>
       <h1>Mailbox List</h1>
       <ul>
         {mailboxes.map((mailbox) => (
@@ -13,7 +13,7 @@ const MailboxList = ({ mailboxes }) => {
           </li>
         ))}
       </ul>
-    </>
+    </main>
   );
 };
 

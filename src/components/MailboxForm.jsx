@@ -19,7 +19,7 @@ const MailboxForm = ({ addMailbox }) => {
   };
 
   return (
-    <>
+    <main>
       <h1>New Mailbox</h1>
       <form onSubmit={handleSubmit}>
         <label htmlFor="boxholder">Enter a Boxholder:</label>
@@ -45,7 +45,7 @@ const MailboxForm = ({ addMailbox }) => {
         </select>
         <button type="submit">Submit</button>
       </form>
-    </>
+    </main>
   );
 };
 
