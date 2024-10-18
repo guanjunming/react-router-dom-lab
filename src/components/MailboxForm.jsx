@@ -6,8 +6,8 @@ const MailboxForm = ({ addMailbox }) => {
   const navigate = useNavigate();
 
   const handleInputChange = (event) => {
-    setMailbox((prevData) => {
-      return { ...prevData, [event.target.id]: event.target.value };
+    setMailbox((prevMailbox) => {
+      return { ...prevMailbox, [event.target.id]: event.target.value };
     });
   };
 
