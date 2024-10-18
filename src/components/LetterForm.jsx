@@ -68,7 +68,6 @@ const LetterForm = ({ mailboxes, addLetter }) => {
           value={letter.message}
           onChange={handleInputChange}
         ></textarea>
-
         <button type="submit">Submit</button>
       </form>
     </main>

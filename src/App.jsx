@@ -42,7 +42,7 @@ const App = () => {
         />
         <Route
           path="/mailboxes/:mailboxId"
-          element={<MailboxDetails mailboxes={mailboxes} />}
+          element={<MailboxDetails mailboxes={mailboxes} letters={letters} />}
         />
         <Route
           path="/new-letter"
