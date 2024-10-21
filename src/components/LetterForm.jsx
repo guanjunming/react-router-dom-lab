@@ -44,6 +44,7 @@ const LetterForm = ({ mailboxes, addLetter }) => {
           id="mailboxId"
           value={letter.mailboxId}
           onChange={handleMailboxChange}
+          required
         >
           {mailboxes.map((mailbox) => (
             <option key={mailbox._id} value={mailbox._id}>
